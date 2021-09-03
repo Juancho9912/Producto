@@ -20,6 +20,9 @@ app.get("/",(req,res,next)=>{
     res.send("Welcome to academic rest api");
 });
 
+const productRoutes = require("./routes/product.routes.js");
+productRoutes(app);
+
 app.listen(port, ()=>{
     console.log("Server is running...");
 })

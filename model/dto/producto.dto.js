@@ -2,7 +2,7 @@
 const mongoose = require("mongoose"); //Leer el paquete mongoosee
 
 /** Using schema */
-const schema = require("../schemas/producto.schema.js");
+const schema = require("../schema/producto.schema.js");
 
 schema.statics = {
     create: function(data,callback){
@@ -19,7 +19,7 @@ schema.statics = {
         this.findOneAndUpdate(query,{$set:data},{new: true}, callback);
     },
     delete: function(query,callback){
-        this.findOneAndDelete(query);
+        this.findOneAndDelete(query,callback);
     },
 
 };

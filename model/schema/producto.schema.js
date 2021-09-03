@@ -4,12 +4,12 @@ const validator = require("mongoose-unique-validator");
 
 /**  Schema creation */
 const productSchema = new mongoose.Schema({
-    codigo:{
+    code:{
         type: "String",
         required: true,
         unique: true
     },
-    nombre:{
+    name:{
         type:"String",
         required:true
     },
@@ -17,11 +17,11 @@ const productSchema = new mongoose.Schema({
         type: "String",
         required: true,
     },
-    peso: {
+    weigth: {
         type:"String",
         required: true
     },
-    precio:{
+    price:{
         type:"String",
         required:true
     }
